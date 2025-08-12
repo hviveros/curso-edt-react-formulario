@@ -1,34 +1,29 @@
-import { useState } from "react";
+import { useRef } from "react";
 import "./App.css"
 
 const App = () => {
 
-    const [data, setData] = useState({ email: "", password:"" })
+    const data = { email: "", password:"" }
 
-    const changeData = e => {
-        setData({
-            ...data,
-            [e.target.name] : e.target.value
-        })
-    }
+    // Componentes no controlados
+    const loginForm = useRef()
 
     const submit = e => {
         e.preventDefault()
-        console.log(data)
+        console.log(loginForm.current)
         alert("Welcome!")
     }
     
     return(
         <div>
-            <form className="container" onSubmit={submit}>
+            <form className="container" onSubmit={submit} ref={loginForm}>
                 <div className="item form__item">
                     <label htmlFor="email">Correo electrónico</label>
                     <input 
                         type="email" 
                         name="email" 
                         id="email" 
-                        value={data.email}
-                        onChange={changeData}
+                        defaultValue={data.email}
                     />
                 </div>
                 <div className="item form__item">
@@ -37,8 +32,7 @@ const App = () => {
                         type="password" 
                         name="password" 
                         id="password" 
-                        value={data.password}
-                        onChange={changeData}
+                        defaultValue={data.password}
                     />
                 </div>
                 <div className="item form__item">
