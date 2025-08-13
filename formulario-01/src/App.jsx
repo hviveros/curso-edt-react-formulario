@@ -1,45 +1,23 @@
-import { useRef } from "react";
 import "./App.css"
+import Field from "./components/Field"
+import Submit from "./components/Submit";
+import Form from "./components/Form";
+import useForm from "./hooks/useForm";
 
 const App = () => {
-
-    const data = { email: "", password:"" }
-
-    // Componentes no controlados
-    const loginForm = useRef()
-
-    const submit = e => {
-        e.preventDefault()
-        console.log(loginForm.current)
-        alert("Welcome!")
-    }
     
+    const [data, loginForm, submit] = useForm({ email: "", password:"" })
+
     return(
-        <div>
-            <form className="container" onSubmit={submit} ref={loginForm}>
-                <div className="item form__item">
-                    <label htmlFor="email">Correo electrónico</label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        defaultValue={data.email}
-                    />
-                </div>
-                <div className="item form__item">
-                    <label htmlFor="password">Contraseña</label>
-                    <input 
-                        type="password" 
-                        name="password" 
-                        id="password" 
-                        defaultValue={data.password}
-                    />
-                </div>
-                <div className="item form__item">
-                    <input type="submit" value="Ingresar" className="button full" />
-                </div>
-            </form>
-        </div>
+        <>
+            <Form submit={submit} formRef={loginForm} >
+                <Field type="email" value={data.email} label="Correo electrónico" />
+
+                <Field type="password" value={data.password} label="Contraseña" />
+                
+                <Submit value="Iniciar sesión" />
+            </Form>
+        </>
     )
 }
 
