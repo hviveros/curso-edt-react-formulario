@@ -1,9 +1,8 @@
-const Field = ({ type, value, label, name }) => {
+const Textarea = ({ type, value, label, name }) => {
     return(
         <div className="item form__item">
             <label htmlFor={ name }>{ label }</label>
-            <input 
-                type={ type } 
+            <textarea 
                 name={ name } 
                 id={ name } 
                 defaultValue={ value }
@@ -12,4 +11,4 @@ const Field = ({ type, value, label, name }) => {
     )
 }
 
-export default Field;
+export default Textarea;
