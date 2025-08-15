@@ -4,6 +4,7 @@ import Submit from "./components/Submit";
 import Form from "./components/Form";
 import useForm from "./hooks/useForm";
 import Textarea from "./components/Textarea";
+import Select from "./components/Select";
 
 const App = () => {
     
@@ -19,6 +20,16 @@ const App = () => {
                 <Field type="range" name="ranking" value={data.ranking} label="Calificacion" />
 
                 <Textarea name="obs" value={data.obs} label="Observaciones" />
+
+                <Select label="País" name="country" options={
+                    [
+                        { val: "py", content: "Paraguay" },
+                        { val: "br", content: "Brasil" },
+                        { val: "ar", content: "Argentina" }
+                    ]
+                } />
+
+                <Field type="checkbox" name="active" checked label="Suscripción activa?" />
 
                 <Submit value="Iniciar sesión" />
             </Form>

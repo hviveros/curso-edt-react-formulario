@@ -28,6 +28,7 @@
 .item.form__item input[type="number"],
 .item.form__item input[type="range"],
 .item.form__item input[type="textarea"],
+.item.form__item input[type="select"],
 .item.form__item input[type="password"] {
   padding: 10px;
   font-size: 1rem;
@@ -41,6 +42,7 @@
 .item.form__item input[type="number"]:focus,
 .item.form__item input[type="range"]:focus,
 .item.form__item input[type="textarea"]:focus,
+.item.form__item input[type="select"]:focus,
 .item.form__item input[type="password"]:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
