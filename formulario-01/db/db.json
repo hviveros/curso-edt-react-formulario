@@ -1,3 +1,34 @@
 {
-    "leads":[]
+  "leads": [
+    {
+      "id": "a33a",
+      "fullname": "Humberto",
+      "mail": "humberto.viverosrios@gmail.com",
+      "age": "50",
+      "ranking": "50",
+      "obs": "Todo bien",
+      "country": "py",
+      "active": true
+    },
+    {
+      "id": "29d2",
+      "fullname": "Test 2",
+      "mail": "test@example.com",
+      "age": "43",
+      "ranking": "33",
+      "obs": "Todo bien 2",
+      "country": "ar",
+      "active": true
+    },
+    {
+      "id": "79bc",
+      "fullname": "Test 3",
+      "mail": "eve.holt@reqres.in",
+      "age": "22",
+      "ranking": "21",
+      "obs": "Test 3",
+      "country": "ar",
+      "active": false
+    }
+  ]
 }

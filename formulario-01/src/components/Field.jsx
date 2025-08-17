@@ -7,7 +7,7 @@ const Field = ({ type, value, label, name, checked }) => {
                 name={ name } 
                 id={ name } 
                 defaultValue={ value }
-                defaultChecked={ checked }
+                checked={ checked }
             />
         </div>
     )

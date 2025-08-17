@@ -2,7 +2,7 @@ const Select = ({ value="", label, name, options=[] }) => {
     return(
         <div className="item form__item">
             <label htmlFor={ name }>{ label }</label>
-            <select defaultValue={ value } name={ name } id={ name }>
+            <select name={ name } id={ name } value={ value }>
                 <option value="">- Seleccionar -</option>
                  {
                     options.map(({val, content}) => (
