@@ -1,6 +1,6 @@
 import { useRef } from "react"
 
-const useForm = ( data = {} ) => {
+const useFormCustom = ( data = {} ) => {
 
     const myRef = useRef()
 
@@ -14,4 +14,4 @@ const useForm = ( data = {} ) => {
 
 }
 
-export default useForm;
+export default useFormCustom;

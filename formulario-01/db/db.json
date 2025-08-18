@@ -1,16 +1,6 @@
 {
   "leads": [
     {
-      "id": "a33a",
-      "fullname": "Humberto",
-      "mail": "humberto.viverosrios@gmail.com",
-      "age": "50",
-      "ranking": "50",
-      "obs": "Todo bien",
-      "country": "py",
-      "active": true
-    },
-    {
       "id": "29d2",
       "fullname": "Test 2",
       "mail": "test@example.com",
@@ -28,6 +18,16 @@
       "ranking": "21",
       "obs": "Test 3",
       "country": "ar",
+      "active": false
+    },
+    {
+      "id": "e437",
+      "fullname": "test555",
+      "mail": "test@example.com",
+      "age": "32",
+      "ranking": "4",
+      "obs": "Test 5",
+      "country": "py",
       "active": false
     }
   ]

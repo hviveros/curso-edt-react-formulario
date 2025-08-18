@@ -1,8 +1,8 @@
-const Select = ({ value="", label, name, options=[] }) => {
+const Select = ({ value="", label, name, options=[], register, errors, rules }) => {
     return(
         <div className="item form__item">
             <label htmlFor={ name }>{ label }</label>
-            <select name={ name } id={ name } value={ value }>
+            <select name={ name } id={ name } defaultValue={ value } {...register(name, rules)}>
                 <option value="">- Seleccionar -</option>
                  {
                     options.map(({val, content}) => (
@@ -10,6 +10,10 @@ const Select = ({ value="", label, name, options=[] }) => {
                     ))
                  }
             </select>
+
+            {errors?.[name] && (
+                <span className="color-red">{errors[name]?.message}</span>
+            )}
         </div>
     )
 }
